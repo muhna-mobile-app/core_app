@@ -2,11 +2,8 @@ name: CI/CD
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    tags:
+      - v*
 
 jobs:
   flutter_test:
@@ -31,7 +28,7 @@ jobs:
       - run: flutter format --dry-run --set-exit-if-changed test/
       - run: flutter test --coverage
       - run: flutter test --machine > test-results.json
-      - uses: dorny/test-reporter@v1.4.2
+      - uses: dorny/test-reporter@v1
         with:
           name: test-results
           path: test-results.json
