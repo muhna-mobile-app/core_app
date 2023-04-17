@@ -2,20 +2,20 @@ name: core_app
 version: 0.0.1
 publish_to: none
 description: A new Flutter project.
-environment: 
-  sdk: '>=2.19.6 <3.0.0'
-dependencies: 
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+dependencies:
   cupertino_icons: ^1.0.5
-  flutter: 
+  flutter:
     sdk: flutter
-dev_dependencies: 
+dev_dependencies:
   git_hooks: ^1.0.0
   dart_pre_commit: ^4.1.0
   pub_release: ^8.2.1
   flutter_lints: ^2.0.1
-  flutter_test: 
+  flutter_test:
     sdk: flutter
-flutter: 
+flutter:
   uses-material-design: true
-scripts: 
+scripts:
   pub_release: pub_release
