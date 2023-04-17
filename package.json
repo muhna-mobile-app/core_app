@@ -1,0 +1,8 @@
+{
+  "name": "core_app",
+  "version": "0.0.1",
+  "description": "MuHNA core application",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {}
+}
