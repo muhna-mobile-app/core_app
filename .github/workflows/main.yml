@@ -37,6 +37,9 @@ jobs:
     name: Release
     needs: build_android_apk
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      EDITOR: nano
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
