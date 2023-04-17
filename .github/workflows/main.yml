@@ -18,13 +18,6 @@ jobs:
         with:
           channel: "stable"
       - uses: actions/cache@v2
-        id: cache-flutter
-        with:
-          path: ${{ env.flutter_root }}
-          key: ${{ runner.os }}-flutter-${{ hashFiles('**/pubspec.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-flutter-
-      - uses: actions/cache@v2
         id: cache-dependencies
         with:
           path: ~/.pub-cache
