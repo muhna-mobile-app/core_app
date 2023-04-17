@@ -1,0 +1,73 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build_android_appbundle:
+    name: Build Flutter (Android)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle
+      - name: Upload appbundle
+        uses: actions/upload-artifact@v2.1.4
+        with:
+          name: appbundle
+          path: build/app/outputs/bundle/release/app-release.aab
+
+  release:
+    name: Release
+    needs: build_android_appbundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Dart
+        uses: subosito/flutter-action@v1
+        with:
+          channel: "stable"
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Run pub_release
+        run: flutter pub run pub_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # version_tag:
+  #   name: Update version and create tag
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Set up Dart
+  #       uses: subosito/flutter-action@v1
+  #       with:
+  #         channel: "stable"
+  #     - name: Update version
+  #       run: dart tool/auto_version.dart
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Create release
+  #       uses: softprops/action-gh-release@v1
+  #       with:
+  #         files: |
+  #           build/app/outputs/bundle/release/app-release.aab
+  #         body: Release ${{ env.VERSION }}
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Create tag
+  #       uses: anothrNick/github-tag-action@v1
+  #       with:
+  #         tag: ${{ env.VERSION }}
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
