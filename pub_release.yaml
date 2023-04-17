@@ -1,0 +1,9 @@
+version: 0.0.1
+commits:
+  title_pattern: "feat|fix"
+  type_overrides:
+    docs: "docs"
+  exclude:
+    - "chore"
+    - "style"
+    - "refactor"
