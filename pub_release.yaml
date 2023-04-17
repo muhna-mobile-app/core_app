@@ -7,3 +7,4 @@ commits:
     - "chore"
     - "style"
     - "refactor"
+publish: false
