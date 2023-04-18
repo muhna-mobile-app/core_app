@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/muhna-mobile-app/core_app/compare/v1.4.0...v1.5.0) (2023-04-18)
+
+
+### Features
+
+* update pubspec version ([a81fceb](https://github.com/muhna-mobile-app/core_app/commit/a81fcebf59a95edb42efb67b1450a1b74691a305))
+
 # [1.4.0](https://github.com/muhna-mobile-app/core_app/compare/v1.3.0...v1.4.0) (2023-04-18)
 
 
