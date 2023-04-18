@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/muhna-mobile-app/core_app/compare/v1.0.1...v1.0.2) (2023-04-18)
+
+
+### Bug Fixes
+
+* updat eci ([be8450d](https://github.com/muhna-mobile-app/core_app/commit/be8450d8e133c5552a5d24b63e6973f732e65a74))
+
 ## [1.0.1](https://github.com/muhna-mobile-app/core_app/compare/v1.0.0...v1.0.1) (2023-04-18)
 
 
