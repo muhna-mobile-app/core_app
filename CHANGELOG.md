@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/muhna-mobile-app/core_app/compare/v1.0.0...v1.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* pipeline failing because of tag ([992bdad](https://github.com/muhna-mobile-app/core_app/commit/992bdad2a66c3ab0d047d7f6ced4ff6fd07410ec))
+
 # 1.0.0 (2023-04-18)
 
 
