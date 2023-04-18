@@ -51,6 +51,9 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Update PubSpec
+        run : sh ./update_pubspec.sh
+
     permissions:
       contents: write
 
