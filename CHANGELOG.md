@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/muhna-mobile-app/core_app/compare/v1.1.0...v1.2.0) (2023-04-18)
+
+
+### Features
+
+* update project version test ([9850f07](https://github.com/muhna-mobile-app/core_app/commit/9850f078b1cc5f230a70ef84257ff57703290f00))
+
 # [1.1.0](https://github.com/muhna-mobile-app/core_app/compare/v1.0.2...v1.1.0) (2023-04-18)
 
 
