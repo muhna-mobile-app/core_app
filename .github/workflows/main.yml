@@ -49,9 +49,6 @@ jobs:
         run: npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/exec
       - name: Run semantic-release
         run: semantic-release --debug false --no-ci
-      - name: Create Git tag
-        if: success()
-        run: git tag ${{ env.RELEASE_VERSION }} && git push origin ${{ env.RELEASE_VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     permissions:
