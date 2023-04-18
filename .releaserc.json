@@ -2,7 +2,7 @@
   "branches": [
     "main"
   ],
-  "repositoryUrl": "https://github.com/muhna-mobile-app/core_app",
+  "repositoryUrl": "http://github.com/muhna-mobile-app/core_app",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
