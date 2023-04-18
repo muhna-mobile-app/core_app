@@ -52,16 +52,8 @@ jobs:
       - name: Create Git tag
         if: success()
         run: git tag ${{ env.RELEASE_VERSION }} && git push origin ${{ env.RELEASE_VERSION }}
-      - name: Create GitHub release
-        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          tag_name: ${{ env.RELEASE_VERSION }}
-          release_name: ${{ env.RELEASE_VERSION }}
-          body: ${{ env.RELEASE_NOTES }}
-          draft: false
-          prerelease: false
     permissions:
       contents: write
 
