@@ -2,5 +2,8 @@
   "name": "core_app",
   "version": "1.2.0",
   "description": "MuHNA core application",
-  "private": true
+  "private": true,
+  "scripts": {
+    "updateVersion": "sh updateVersion.sh"
+  }
 }

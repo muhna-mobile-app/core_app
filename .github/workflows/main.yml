@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Update PubSpec
-        run : sh ./updateVersion.sh
+        run : npm updateVersion
 
     permissions:
       contents: write
