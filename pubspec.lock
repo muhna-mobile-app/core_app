@@ -475,6 +475,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+  mfa_authentication:
+    dependency: "direct main"
+    description:
+      path: "../mfa_authentication"
+      relative: true
+    source: path
+    version: "0.0.1"
   mime:
     dependency: transitive
     description:
@@ -882,3 +889,4 @@ packages:
     version: "1.0.3"
 sdks:
   dart: ">=2.19.6 <3.0.0"
+  flutter: ">=1.17.0"

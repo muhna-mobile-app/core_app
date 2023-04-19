@@ -8,6 +8,8 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  mfa_authentication:
+    path: "../mfa_authentication"
 dev_dependencies:
   git_hooks: ^1.0.0
   dart_pre_commit: ^4.1.0
