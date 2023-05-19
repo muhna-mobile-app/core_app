@@ -10,6 +10,16 @@ dependencies:
     sdk: flutter
   mfa_authentication:
     path: "../mfa_authentication"
+  mfa_home:
+    path: "../mfa_home"
+  mfa_profile:
+    path: "../mfa_profile"
+  common_dependencies:
+    path: "../common_dependencies"
+  common_utils:
+    path: "../common_utils"
+  provider: ^6.0.5
+
 dev_dependencies:
   git_hooks: ^1.0.0
   dart_pre_commit: ^4.1.0
@@ -19,5 +29,14 @@ dev_dependencies:
     sdk: flutter
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/muhna_logo.jpg
+
+  fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: assets\fonts\Source_Sans_Pro\SourceSansPro-SemiBold.ttf
+        - asset: assets\fonts\Source_Sans_Pro\SourceSansPro-Regular.ttf
+
 scripts:
   pub_release: pub_release
