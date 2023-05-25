@@ -8,6 +8,20 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  mfa_authentication:
+    git:
+      url: "https://github.com/muhna-mobile-app/mfa_authentication"
+  mfa_home:
+    git:
+      url: "https://github.com/muhna-mobile-app/mfa_home"
+  mfa_profile:
+    git:
+      url: "https://github.com/muhna-mobile-app/mfa_profile"
+  common_dependencies:
+    git:
+      url: "https://github.com/muhna-mobile-app/common_dependencies"
+  provider: ^6.0.5
+
 dev_dependencies:
   git_hooks: ^1.0.0
   dart_pre_commit: ^4.1.0
@@ -17,5 +31,14 @@ dev_dependencies:
     sdk: flutter
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/muhna_logo.jpg
+
+  fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: assets\fonts\Source_Sans_Pro\SourceSansPro-SemiBold.ttf
+        - asset: assets\fonts\Source_Sans_Pro\SourceSansPro-Regular.ttf
+
 scripts:
   pub_release: pub_release
